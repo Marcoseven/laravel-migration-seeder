@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function(){
     return view ('welcome');
-});
+})->name('home');
 
 Route::get('trips', 'TripController@index')->name('trips');
 Route::get('trips/{trip}', 'TripController@show')->name('trip');
