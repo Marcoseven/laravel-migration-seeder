@@ -13,4 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PageController@index');
+Route::get('/', function(){
+    return view ('welcome');
+});
+
+Route::get('trips', 'TripController@index')->name('trips');
+Route::get('trips/{trip}', 'TripController@show')->name('trip');
+

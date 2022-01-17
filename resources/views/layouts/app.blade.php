@@ -4,13 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
-        @yield('custom-css')
-        <title>Trips @yield('title', 'laravel-migration-seeder')</title>
-
-        <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <title>Trips @yield('pag-title', 'Welcome')</title>
     </head>
     <body>
-        @yield('content')
+        @include('partials.header');
+        @include('partials.footer');
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
