@@ -15,8 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function(){
     return view ('welcome');
-})->name('home');
+})->name('welcome');
 
 Route::get('trips', 'TripController@index')->name('trips');
 Route::get('trips/{trip}', 'TripController@show')->name('trip');
+Route::get('blog', 'PostController@index')->name('blog');
+Route::get('blog/{post}', 'PostController@show')->name('post');
+
 

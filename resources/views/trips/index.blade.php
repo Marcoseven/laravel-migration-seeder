@@ -1,21 +1,28 @@
 @extends('layouts.app')
-@section('pag-title', 'Trips HomePage')
+@section('pag-title', 'HomePage')
 @section('content')
 
 <div class="container">
-    <h1 class="text-center">
-        Our trips
-    </h1>
-</div>
-
-<section class="trips">
-    @forelse($trips as $trip)
-        <h4>Località: {{ $trip->locality }}</h4>
-        <h4>Giorno di partenza: {{ $trip->departure_date }}</h4>
-        <h4>Numero di giorni: {{ $trip->number_of_days }}</h4>
-        <hr>
-        @empty
+    <h2 class="text-center">
+        Trips Page   
+    </h2>
+    <div>
+        @forelse($trips as $trip)
+         <div class="col">
+             <div class="card">
+                <h4>Località: {{ $trip->location }}</h4>
+                <h4>Numero di giorni: {{ $trip->duration }}</h4>
+                <h4>Giorno di partenza: {{ $trip->departure_date }}</h4>
+             </div>
+         </div>
+         <hr>
+         @empty
         <p>Mi dispiace, nulla da mostrare</p>
-    @endforelse 
-</section>
+         @endforelse 
+    </div>
+</div>
 @endsection
+
+
+
+

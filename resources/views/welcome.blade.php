@@ -4,7 +4,7 @@
 
 <div class="container">
     <h1 class="text-center">
-        Pacchetti di viaggio offerti
+        Agenzia viaggio
     </h1>
 </div>
 @endsection

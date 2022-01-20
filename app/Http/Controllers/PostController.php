@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Trip;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
-class TripController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,20 +14,18 @@ class TripController extends Controller
      */
     public function index()
     {
-        $trips = Trip::all();
-        //ddd($trips);
-        return view('trips.index', compact('trips'));
+        $posts = Post::all();
+        return view('blog.index', compact('posts'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Trip  $trip
+     * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Trip $trip)
+    public function show(Post $post)
     {
-        //ddd($trip);
-        return view('trips.show', compact('trip')); 
+        return view('blog.show', compact('post'));
     }
 }
