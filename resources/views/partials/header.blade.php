@@ -7,7 +7,7 @@
               <a class="nav-link active" aria-current="page" href="{{ route('welcome') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('trips') }}">Trips</a>
+              <a class="nav-link" href="{{ route('flights') }}">Flights</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('blog') }}">Blog</a>

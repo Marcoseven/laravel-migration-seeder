@@ -13,13 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function(){
-    return view ('welcome');
-})->name('welcome');
-
-Route::get('trips', 'TripController@index')->name('trips');
-Route::get('trips/{trip}', 'TripController@show')->name('trip');
-Route::get('blog', 'PostController@index')->name('blog');
-Route::get('blog/{post}', 'PostController@show')->name('post');
-
-
+Route::get('/', 'PageController@index')->name('welcome');
+Route::get('/flights', 'PageController@flights')->name('flights');
+Route::get('/blogs', 'PageController@blog')->name('blog');
+Route::get('/blogs/{blog}', 'PageController@show')->name('post');
